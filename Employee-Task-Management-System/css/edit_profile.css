@@ -1,0 +1,223 @@
+/* CSS hoàn toàn mới cho edit_profile.php */
+
+.section-1 {
+    padding: 30px;
+    background-color: #f5f7fa;
+}
+
+/* Tiêu đề trang với thiết kế hiện đại */
+.section-1 .title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #2c3e50;
+}
+
+.section-1 .title span i {
+    margin-right: 10px;
+    color: #3498db;
+}
+
+.section-1 .title a {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    background: #3498db;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(52, 152, 219, 0.2);
+}
+
+.section-1 .title a i {
+    margin-right: 8px;
+}
+
+.section-1 .title a:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(52, 152, 219, 0.3);
+}
+
+/* Form styling với thiết kế card hiện đại */
+form {
+    background-color: #fff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    max-width: 700px;
+    margin: 0 auto;
+    border-top: 5px solid #3498db;
+}
+
+.form-section {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.form-section label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #34495e;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.form-section label i {
+    margin-right: 8px;
+    color: #3498db;
+    width: 20px;
+    text-align: center;
+}
+
+.form-section input {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s;
+    background-color: #f9f9f9;
+}
+
+.form-section input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+    background-color: #fff;
+    outline: none;
+}
+
+/* Thiết kế cho input date */
+input[type="date"] {
+    font-family: inherit;
+    color: #333;
+    cursor: pointer;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23bdc3c7" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 15px);
+    background-position-y: center;
+}
+
+/* Thiết kế cho placeholder */
+::placeholder {
+    color: #bdc3c7;
+    opacity: 1;
+}
+
+/* Hiệu ứng cho các trường nhập liệu khi focus */
+.form-section:focus-within label {
+    color: #3498db;
+}
+
+/* Thông báo thành công và lỗi với thiết kế hiện đại */
+.success, .danger {
+    padding: 16px 20px 16px 50px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    position: relative;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.success {
+    background-color: #ebfaf0;
+    color: #27ae60;
+    border-left: 4px solid #27ae60;
+}
+
+.danger {
+    background-color: #fdedeb;
+    color: #e74c3c;
+    border-left: 4px solid #e74c3c;
+}
+
+.success::before,
+.danger::before {
+    font-family: 'FontAwesome';
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+}
+
+.success::before {
+    content: "\f058"; /* fa-check-circle */
+}
+
+.danger::before {
+    content: "\f057"; /* fa-times-circle */
+}
+
+/* Nút submit với thiết kế gradient đẹp mắt */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: linear-gradient(to right, #3498db, #2980b9);
+    padding: 14px 28px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s;
+    margin-top: 10px;
+    font-weight: 500;
+    box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);
+    width: auto;
+}
+
+.btn i {
+    margin-right: 8px;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #2980b9, #2573a7);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.4);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .section-1 {
+        padding: 20px 15px;
+    }
+    
+    .section-1 .title {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .section-1 .title a {
+        margin-top: 15px;
+    }
+    
+    form {
+        padding: 25px 20px;
+        border-radius: 10px;
+    }
+    
+    .form-section input {
+        padding: 12px;
+    }
+    
+    .btn {
+        width: 100%;
+        padding: 14px;
+    }
+}
